@@ -37,7 +37,7 @@ def plot_ma_data():
 	fig.add_trace(go.Scatter(x=data['Date'], y=data.Close.rolling(50).mean(), name="50d MA"))
 	fig.add_trace(go.Scatter(x=data['Date'], y=data.Close.rolling(200).mean(), name="200d MA"))
     #fig.add_trace(go.Scatter(x=data['Date'], y=data.Close.rolling(200).mean(), name="stock_close")) 
-	fig.layout.update(title_text='100d vs 200d MA', xaxis_rangeslider_visible=True)
+	fig.layout.update(title_text='50d vs 200d MA', xaxis_rangeslider_visible=True)
 	st.plotly_chart(fig)
 	
 plot_ma_data()
